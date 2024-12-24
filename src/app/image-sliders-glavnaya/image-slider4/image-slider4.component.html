@@ -1,0 +1,14 @@
+<div class="slider-container">
+    <div class="slider">
+      <div class="slider__slides">
+        <div *ngFor="let img of visibleImages" class="slider__card">
+          <img [src]="img.src" [alt]="img.alt" class="slide__image" />
+          <h3>{{ img.master }}</h3>
+        </div>
+      </div>
+    </div>
+    
+    <button (click)="prevSlide()" [disabled]="isPrevDisabled" class="nav-button prev-button">←</button>
+    <button (click)="nextSlide()" [disabled]="isNextDisabled" class="nav-button next-button">→</button>
+  </div>
+  

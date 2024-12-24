@@ -1,0 +1,110 @@
+<div class="wrapper">
+    <div id="uslugi" class="uslugi">
+        <div class="container">
+            <div class="uslugi__title title"><h2>Услуги</h2></div>
+            <div class="uslugi__body">
+                <div class="uslugi__left">
+                    <div class="uslugi__title-icon">
+                        <img [src]="contents[currentContentIndex].image" alt="Image">
+                        <h2>{{ contents[currentContentIndex].title }}</h2>
+                    </div>
+                        @if (currentContentIndex === 0) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Все виды современных и модных стрижек на любую длину волос, которые, в большинстве своем, не требуют сложных укладок в домашних условиях.</a>
+                                    <br>
+                                    <li>Стрижка женская короткие волосы — 1 200 ₽</li> 
+                                    <li>Стрижка женская средняя Длина до плеч — 1 500 ₽</li> 
+                                    <li>Стрижка женская длинные — 1 700 ₽</li> 
+                                    <li>Стрижка челки — 600 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/strizhki"><button class="button-yellow">Подробнее</button></a>
+                        }
+                        @if (currentContentIndex === 1) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Окрашивания любой сложности: от однотонного до сложных техник, таких как балаяж, шатуш, эйртач, омбре, мелирование и т. д.(с применением современной техники «Лессировка»).</a>
+                                    <br>
+                                    <li>Окрашивание короткие волосы — 2 500 ₽</li> 
+                                    <li>Окрашивание средняя длина — 3 500 ₽</li> 
+                                    <li>Окрашивание длинные волосы — 4 500 ₽</li> 
+                                    <li>Кератин/Ботокс короткие 30-35см — 3 500 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/okrashivanie"><button class="button-yellow">Подробнее</button></a>
+                        }
+                        @if (currentContentIndex === 2) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Массаж – это инвестиция в свое здоровье.
+                                        В нашем салоне представлены различные техники массажа, включая классические и уникальные методы.</a>
+                                    <br>
+                                    <li>Общий классический массаж — 2 200 ₽</li> 
+                                    <li>Лимфодренажный массаж — 2 300 ₽</li> 
+                                    <li>Антицеллюлитный массаж — 2 500 ₽</li> 
+                                    <li>Авторский массаж лица — 3 000 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/massage"><button class="button-yellow">Подробнее</button></a>
+                        }
+                        @if (currentContentIndex === 3) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Различные виды маникюра с покрытием и без, японский, классический, нюд или яркий, с дизайном или без него. В работе используем материалы от бренда Nano Professionsl.</a>
+                                    <br>
+                                    <li>Маникюр аппаратный — 800 ₽</li> 
+                                    <li>Маникюр аппаратный со снятием покрытия — 1 000 ₽</li> 
+                                    <li>Маникюр + покрытие гель-лак — 1 600 ₽</li> 
+                                    <li>Маникюр + покрытие твёрдым гелем — 1 900 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/manicure"><button class="button-yellow">Подробнее</button></a>
+                        }
+                        @if (currentContentIndex === 4) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Для заботы о красоте и здоровье ваших ног мы выполняем различные виды педикюра, в том числе и Smart.
+                                        В работе используем материалы от бренда Nano Professionsl.</a>
+                                    <br>
+                                    <li>Педикюр полная обработка стопы с покрытием — 2 600 ₽</li> 
+                                    <li>Педикюр полная обработка стопы без покрытия — 2 000 ₽</li> 
+                                    <li>Педикюр обработка пальчиков с покрытием — 2 000 ₽</li> 
+                                    <li>Педикюр обработка пальчиков без покрытия — 1 500 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/pedicure"><button class="button-yellow">Подробнее</button></a>
+                        }
+                        @if (currentContentIndex === 5) {
+                            <div class="uslugi__text">
+                                <ul class="uslugi__list-left">
+                                    <a href="#">Это сочетание стиля, практичности и индивидуального подхода. Мы подберем стрижку, которая подчеркнет ваши черты лица, будет гармонировать с образом и потребует минимального ухода.</a>
+                                    <br>
+                                    <li>Мужская стрижка короткие волосы — 800 ₽</li> 
+                                    <li>Мужская стрижка длинные волосы — 1 000 ₽</li> 
+                                    <li>Мужская укладка феном — 800 ₽</li> 
+                                    <li>Стрижка бороды — 500 ₽</li> 
+                                </ul>
+                            </div>
+                            <a href="/muzh-strizhki"><button class="button-yellow">Подробнее</button></a>
+                        }
+                </div>
+                <div class="uslugi__right">
+                    <ul class="uslugi__list-right">
+                        <button *ngFor="let button of buttons; let i = index;"  (click)="changeContent(i);">
+                            {{ button.text }}  
+                            <ng-container *ngIf="button.isActive == false;">
+                                <img src="/assets/uslugi-icon.png" alt="Активное состояние">
+                            </ng-container>
+                            <ng-container *ngIf="button.isActive == true;">
+                                <img src="/assets/uslugi-icon-active.png" alt="Активное состояние">
+                            </ng-container>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

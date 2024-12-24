@@ -1,0 +1,336 @@
+.wrapper {
+    .booking-form {
+        margin-bottom: 83px;
+        .container {
+            .booking-form__title {
+            }
+            .title {
+            }
+            .booking-form__subtitle {
+            }
+            .subtitle {
+            }
+        }
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1EEE1;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1266px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+    background-color: #FFFFFF; /* Цвет фона */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.custom-color{
+    background: rgb(241, 238, 225);
+}
+
+.booking-form__columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.booking-form__left{
+    flex: 0 0 33%;
+}
+
+.booking-form__right{
+    flex: 0 0 50%;
+}
+
+.hidden {
+    display: none; /* Скрывает блок с датами */
+}
+
+h2 {
+    /*color: #F7CC20;*/
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Bebas Neue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 98%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+        
+    color: rgb(51, 51, 51);
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 145%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+input{
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 145%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+button{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #F7CC20;
+}
+
+/* Поле услуг */
+.options {
+    position: absolute; /* Позволяет выпадающему списку быть поверх других элементов */
+    background: white;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    z-index: 1000; /* Убедитесь, что выпадающий список выше других элементов */
+    max-height: 200px; /* Ограничиваем высоту списка */
+    overflow-y: auto; /* Добавляем прокрутку, если слишком много элементов */
+    display: none; /* Скрываем по умолчанию */
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #F7CC20; /* Цвет фона при наведении */
+    color: white; /* Меняем цвет текста при наведении */
+}
+
+/* Поле мастеров */
+.dropdown {
+    position: relative; /* Позволяет позиционировать стрелку внутри контейнера */
+}
+
+#filterStaff {
+    padding-right: 40px; /* Добавляем отступ справа для иконки */
+}
+
+.arrow {
+    position: absolute;
+    right: 10px; /* Отступ от правого края */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    pointer-events: none; /* Игнорируем события мыши на стрелке */
+    margin-top: 5px;
+}
+
+.staffOptions {
+    position: absolute; /* Позволяет выпадающему списку быть поверх других элементов */
+    background: white;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    z-index: 1000; /* Убедитесь, что выпадающий список выше других элементов */
+    max-height: 200px; /* Ограничиваем высоту списка */
+    overflow-y: auto; /* Добавляем прокрутку, если слишком много элементов */
+    display: none; /* Скрываем по умолчанию */
+}
+
+.staffOption {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.staffOption img {
+    width: 40px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    border-radius: 5px; /* Скругление углов */
+    margin-right: 10px; /* Отступ между изображением и текстом */
+}
+
+.staffOption:hover {
+    background-color: #F7CC20; /* Цвет фона при наведении */
+    color: white; /* Меняем цвет текста при наведении */
+}
+
+/* Поле даты */
+.calendar-container {
+    text-align: center;
+    position: relative;
+    margin: 20px;
+}
+
+.month-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Отступ сверху для кнопок */
+    grid-template-columns: 40px 1fr 40px;
+}
+
+.arrow-button {
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.arrow-button img {
+    width: 100%; /* Заставляем изображение занимать всю кнопку */
+    height: auto; /* Сохраняем пропорции изображения */
+    visibility: visible; /* Убедимся, что изображение видно */
+}
+
+.arrow-button:disabled {
+    opacity: 0.5; /* Делает неактивные кнопки полупрозрачными */
+    cursor: not-allowed; /* Меняет указатель на недоступный */
+}
+
+.date-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px; /* Отступы для стрелок */
+}
+
+.date-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(247, 204, 32); /* Исходный фон */
+    margin: 0 5px; /* Отступы между квадратами */
+    cursor: pointer; /* Указатель при наведении */
+    border: 1px solid #ccc; /* Пример границы */
+    padding: 10px; /* Отступы */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+/*Дата при нажатии*/
+.date-button.selected {
+    background-color: rgb(51, 51, 51); /* Цвет фона при выборе */
+    color: white; /* Цвет текста при выборе */
+}
+
+
+
+/*Поле время*/
+.time-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Отступ сверху для визуального отделения */
+}
+
+.time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Используем gap для отступов между кнопками */
+}
+
+.time-button {
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Уменьшаем размытие для более легкого фона */
+    background: rgb(230, 230, 230);
+    position: relative; /* Убираем absolute, чтобы кнопки располагались в сетке */
+    width: 80px; /* Уменьшаем ширину кнопок для лучшего отображения */
+    height: 35px; /* Увеличиваем высоту кнопок для лучшего комфорта */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Отступ между кнопками */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 14px; /* Увеличиваем размер шрифта для лучшей читаемости */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход для фона и трансформации */
+}
+
+.time-button:hover {
+    background-color: #808080; /* Цвет при наведении */
+    color: white; 
+}
+
+.selected {
+    background-color: rgb(51, 51, 51); /* Цвет фона выделенной кнопки */
+    color: white; /* Цвет текста выделенной кнопки */
+}
+
+/*Кнопки добавить услугу и записаться*/
+.btn-container {
+    display: grid; /* Используем Grid для контейнера */
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); /* Автоматически заполняем строки с минимальной шириной 225px */
+    gap: 10px; /* Промежуток между кнопками */
+    justify-items: center;
+}
+
+.btn {
+    width: 225px; /* Ширина кнопки */
+    height: 55px; /* Высота кнопки */
+    border-radius: 10px; /* Скругление углов */
+    backdrop-filter: blur(20px); /* Эффект размытия фона */
+    padding: 20px 35px; /* Отступы внутри кнопки */
+    display: flex; /* Flex для содержимого кнопки */
+    flex-direction: row; /* Горизонтальное направление содержимого */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+}
+
+#add-service {
+    background: rgb(51, 106, 5);
+    color: #FFFFFF;
+    left: 97px;
+    top: 802px;
+}
+
+#recordButton {
+    background: rgb(247, 204, 32);
+    color: #1a1a18;
+    left: 392px;
+    top: 802px;
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Указываем, что это кнопка */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+#recordButton:active:not(:disabled) {
+    background-color: #333333; /* Цвет при нажатии */
+    color: white; /* Цвет текста при нажатии */
+}

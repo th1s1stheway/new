@@ -1,0 +1,1495 @@
+//Шрифт
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/ofont.ru_Bebas\ Neue.ttf') format('truetype'),;
+    font-weight: normal;
+    font-style: normal;
+}
+//Обнуленме стилей 
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-style: 100%;
+	line-height: 1;
+	font-style: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+img{vertical-align: top;}
+h1,h2, h3, h4, h5, h6{font-style: inherit; font-weight: 400;}
+/* You can add global styles to this file, and also import other style files */
+//@import 'swiper/swiper-bundle.css';
+html {
+    scroll-behavior: smooth;
+}
+a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 23px */
+
+    color: #333333;
+}
+
+
+.custom-dialog {
+    position: fixed !important; /* Фиксированное позиционирование */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Смещение для центрирования */
+    z-index: 1000; /* Убедитесь, что диалог поверх остальных элементов */
+    /*max-width: 1266px; /* Максимальная ширина */
+    overflow: auto; /* Прокрутка при переполнении */
+  }
+  
+  .custom-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  }
+  
+.wrapper{
+    max-width: 1440px; /* Максимальная ширина 1440px */
+    width: 100%; /* Ширина 100% для адаптивности */
+    margin: 0 auto; /* Центрирование заголовка */
+}
+.container{
+    //max-width: 1440px; /* Максимальная ширина 1440px */
+    width: 100%; /* Ширина 100% для адаптивности */
+    margin: 0 auto; /* Центрирование заголовка */
+}
+header {
+    max-width: 1440px; /* Максимальная ширина 1440px */
+    width: 100%; /* Ширина 100% для адаптивности */
+    margin: 0 auto; /* Центрирование заголовка */
+    display: flex; /* Использование Flexbox */
+    justify-content: space-between;
+    align-items: center; /* Вертикальное выравнивание по центру */
+    padding: 20px; /* Отступы по желанию */
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 999;
+
+    img {
+
+        width: 106px;
+        height: 69px;
+
+    }
+    nav ul {
+        list-style-type: none; /* Убирает маркеры списка */
+        margin: 0; /* Убирает отступы */
+        padding: 0; /* Убирает внутренние отступы */
+        display: flex; /* Использует Flexbox для горизонтального расположения элементов списка */
+    }
+    
+    nav li {
+        margin-left: 20px; /* Отступы между элементами навигации */
+        /* Главная */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        color: #333333;
+        a {
+            font-size: 14px;
+        }
+    }
+    
+    nav a {
+        text-decoration: none; /* Убирает подчеркивание ссылок */
+        color: #000; /* Цвет текста ссылок */
+    }
+    span {
+        /* г. Красноярк, ул. Красноярский рабочий 160, стр.1 */
+        max-width: 260px;
+        height: 38px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 135%;
+        /* or 19px */
+        text-align: center;
+
+        color: #333333;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+
+        max-width: 100%;
+        min-height: 55px;
+
+        background: #333333;
+        border-radius: 10px;
+
+        /* Онлайн запись */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+    button:active{
+        background: #F7CC20;
+        color: #333333;
+    }
+}
+
+footer {
+    a{
+        color: #FFFFFF;
+    }
+    .container {
+        max-width: 1399px;
+        min-height: 820px;
+        background: linear-gradient(122.35deg, #1A1A1A 1.32%, #183500 35.76%, #101010 69.1%, #090909 110.65%);
+        border-radius: 10px;
+        padding: 59px 40px 30px 40px;
+    }
+    .footer__top {
+        .footer__row { 
+            display: flex;
+            justify-content: space-between;
+
+            .footer__column {
+                display: flex;
+                flex-direction: column;
+                
+                .footer__item-logo {
+                    .footer__item {
+                    }
+
+                    .footer__logo {
+                        margin-right: 146px;
+                        img{
+                            max-width: 133px;
+                            min-height: 87px;    
+                        }
+                    }
+                    .footer__icons {
+                        padding-top: 38px;
+                        padding-bottom: 35px;
+                        display: flex;
+                        gap: 10px;
+                        
+                        .footer__icon {
+                            width: 55px;
+                            height: 55px;
+                            display: flex; /* Включаем Flexbox для иконки */
+                            justify-content: center; /* Центрируем изображение по горизонтали */
+                            align-items: center; /* Центрируем изображение по вертикали */
+
+    
+                            background: #274D07;
+                            border-radius: 10px;
+                            a{
+                                display: flex; /* Включаем Flexbox для иконки */
+                                justify-content: center; /* Центрируем изображение по горизонтали */
+                                align-items: center; /* Центрируем изображение по вертикали */
+                            }
+                            img{
+                                
+                            }
+                        }
+                    }
+                    .footer__author {
+                        width: 100%;
+                        min-height: 15px;
+
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        /* identical to box height */
+
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                    .footer__politika {
+                        a{
+                            font-size: 12px;
+                        }
+                        padding-top: 5px;
+                        /* Политика конфиденциальности */
+                        width: 100%;
+                        min-height: 15px;                        
+
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        /* identical to box height */
+
+                        color: #FFFFFF;
+
+                    }
+                }
+                
+                .footer__item {
+                    
+                    .footer__title {
+                        padding-bottom: 20px;
+                        h2{
+                            /* Услуги */
+                            min-width: 315px;
+                            height: 38px;
+                            
+                            font-family: 'Bebas Neue';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 40px;
+                            line-height: 95%;
+                            /* identical to box height, or 38px */
+                            letter-spacing: 0.02em;
+                            text-transform: uppercase;
+
+                            color: #FFFFFF;
+                        }
+                    }
+                    .footer__body {
+                        ul{
+                            max-width: 315px;
+                            height: 154px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li{
+                            /* Стрижки и укладки Окрашивание Уход за волосами Маникюр Педикюр Массаж */
+                            flex: 1;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 19px;
+
+                            color: #FFFFFF;
+
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    .footer__contact {
+        margin-top: 65px;
+        .footer__row-contact {
+            display: flex;
+            gap: 115px;
+            align-items: baseline;
+            .footer__column-contact {
+                .footer__item-contact {
+                    p{
+                        /* Ежедневно с 09:00 до 20:00 */
+                        
+
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 24px;
+
+                        color: #F7CC20;
+
+                    }
+                    h2{
+                        /* +7 (391) 845-98-32 */
+                        width: 391px;
+                        height: 64px;
+
+                        font-family: 'Bebas Neue';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 64px;
+                        line-height: 100%;
+                        /* identical to box height, or 64px */
+                        text-transform: uppercase;
+
+                        color: #F7CC20;
+
+                    }
+                }
+            }
+        }
+    }
+    .footer__map {
+        margin-top: 45px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+// Начало редактирования главной
+.top{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    .top__left {
+        /* Rectangle 2 */
+        width: 690px;
+        height: 627px;
+        background: linear-gradient(122.35deg, #1A1A1A 1.32%, #183500 35.76%, #101010 69.1%, #090909 110.65%);
+        border-radius: 10px;
+
+        .top__title {
+            margin-left: 40px;
+            margin-top: 118px;
+            /* Салон красоты в Красноярске */
+            width: 545px;
+            height: 196px;
+            
+            h2  {
+            }
+
+        }
+        .top__subtitle {
+            margin-left: 40px;
+            margin-top: 14px;
+            
+            max-width: 382px;
+            height: 46px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 145%;
+            /* or 23px */
+
+            color: #FFFFFF;
+        }
+        button {        
+            margin-top: 20px;
+            margin-left: 40px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 35px;
+            gap: 10px;
+            
+            min-width: 200px;
+            min-height: 55px;
+
+            background: #F7CC20;
+            border-radius: 10px;
+
+            /* Онлайн запись */
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+
+            color: #333333;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .top__icons{
+            margin-top: 88px;
+            margin-left: 40px;
+        }
+    }
+    .top__right {
+        /* Уход за волосами_главный экран_галерея */
+
+        width: 690px;
+        height: 627px;
+
+        //background: url();
+        border-radius: 10px;
+
+    }
+}
+
+.portfolio {
+    margin-top: 83px;
+    .container {
+    }
+    .portfolio__title {
+        /* Работы наших мастеров */
+    }
+    .portfolio__cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        .portfolio__card {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+    
+            button {
+                min-width: 186px;
+                min-height: 55px;
+                padding: 20px;
+                background: #F1EEE1;
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 10px;
+        
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+    
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+    
+                color: #336A05;
+    
+    
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+        }
+    }   
+    
+    .portfolio__slider {
+        .swiper-button-next {
+        }
+        swiper-container{
+            --swiper-navigation-color: #F7CC20;
+            --swiper-navigation-background: url(/assets/Arrow.svg);
+        }
+        swiper-container::part(button-next) {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            background: #F7CC20;    
+            //content: url('/assets/Arrow.svg');
+            background-image: url('/assets/Arrow.svg');
+            background-size: auto; /* Оставляет фон в исходном размере */
+            background-repeat: no-repeat; /* Не повторять изображение */
+            background-position: center;
+
+        }
+        swiper-container::part(button-prev) {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #F7CC20; 
+            //content: url('/assets/Arrow2.svg');
+            background-image: url('/assets/Arrow2.svg');
+            background-size: auto; /* Оставляет фон в исходном размере */
+            background-repeat: no-repeat; /* Не повторять изображение */
+            background-position: center;
+        }       
+
+   
+        
+        .master {
+        }           
+        margin: 0 auto;
+
+        //height: 450px;
+
+        //background: url();
+        border-radius: 10px;
+        margin-top: 40px;
+        
+        text-align: center;
+
+        img {
+            max-width: 466px;
+        }
+
+        .master{
+            margin-top: 28px;
+            /* Мастер Анастасия Попова */
+
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 125%;
+            /* identical to box height, or 50px */
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+
+            color: #333333;
+
+
+        }
+    }
+}
+
+.academy {
+    margin-top: 100px;
+    .container {
+    }
+    .academy__title {
+    }
+    .academy__body{
+        display: flex;
+        gap: 19px;
+        .academy__left {  
+            /* Rectangle 54 */
+            width: 913px;
+            height: 618px;
+
+            background: linear-gradient(122.35deg, #1A1A1A 1.32%, #183500 50.96%, #101010 84.39%, #090909 110.65%);
+            border-radius: 10px;
+
+        }
+        .academy__row {
+            display: flex;
+            .academy__column-1 {
+                width: 50%;
+                margin-left: 40px;
+                .academy__item {
+                    margin-top: 40px;
+                    img {
+                        /* Пункт_иконка */
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .academy__item-title {
+                    /* 4 курса */
+                    //width: 134px;
+                    //height: 63px;
+
+                    font-family: 'Bebas Neue';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 125%;
+                    /* identical to box height, or 62px */
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+
+                    color: #FFFFFF;
+                }
+                .academy__item-text {
+                    /* для закрытия всех вопросов */
+                    //width: 229px;
+                    //height: 23px;
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 145%;
+                    /* or 23px */
+
+                    color: #FFFFFF;
+                }
+            }
+            .academy__column-2 {
+                width: 50%;
+                .academy__item {
+                    margin-top: 40px;
+                    img {
+                        /* Пункт_иконка */
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .academy__item-title {
+                    /* 4 курса */
+                    //width: 134px;
+                    //height: 63px;
+
+                    font-family: 'Bebas Neue';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 125%;
+                    /* identical to box height, or 62px */
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+
+                    color: #FFFFFF;
+                }
+                .academy__item-text {
+                    /* для закрытия всех вопросов */
+                    //width: 229px;
+                    //height: 23px;
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 145%;
+                    /* or 23px */
+
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .academy__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            /* Курс маникюра */
+
+            width: 469px;
+            height: 618px;
+
+            background: url(assets/academy/Курс_маникюра.png);
+            border-radius: 10px;
+            
+            button {
+                //width: 429px;
+                width: 90%;
+                height: 55px;
+                margin-bottom: 20px;
+            }
+            a {
+                //width: 429px;
+                width: 90%;
+                height: 55px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.team {
+    margin-top: 100px;
+    .container {
+        
+    }
+    .team__title {
+    }
+    .team__body {
+    }
+}
+
+.why {
+    padding-top: 100px;
+    .container {
+    }
+    .why__title {
+    }
+    .title {
+    }
+    .why__body {
+        display: flex;
+        gap: 61px;
+        .why__left {
+            width: 50%;
+            /* Салон_3 */
+            height: 550px;
+
+            background: url(assets/Салон_3.png);
+            border-radius: 10px;
+
+        }
+        .why__right {
+            width: 50%;
+            .why__text {
+                margin-top: 96px;
+                /* Все процедуры в нашем салоне выполняют опытные мастера, которые имеют дипломы, сертификаты и награды, подтверждающие их высокий уровень профессионализма и владение современными техниками. Мы гордимся обширным портфолио документальных подтверждений квалификации нашей команды. Эти достижения – ваша гарантия того, что услуги предоставляются исключительно сертифицированными специалистами и соответствуют самым высоким стандартам качества. Ваше доверие – наша главная ценность, и мы стремимся оправдывать его в каждой процедуре. */
+
+                width: 609px;
+                //height: 297px;
+
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 155%;
+                /* or 25px */
+
+                color: #333333;
+
+            }
+            .why__button {
+                margin-top: 35px;
+            
+                
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+
+                button {
+                    border-radius: 10px;
+                    background: #274D07;
+                    /* Смотреть отзывы */
+                    width: 190px;
+                    height: 55px;
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+
+                    color: #FFFFFF;
+
+
+                    /* Inside auto layout */
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+
+                }
+
+            }
+        }
+    }
+}
+
+.stroka {
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 76px;
+    .container {
+    }
+    .stroka__row {
+        position: relative; /* Для абсолютного позиционирования внутреннего элемента */
+        width: 1440px;
+        //overflow: hidden; /* Скрыть переполнение */
+        white-space: nowrap; /* Запретить перенос строк */
+        display: flex; /* Используем flexbox для размещения элементов в строку */
+        gap: 50px;
+        animation: stroka 20s linear infinite; /* Анимация */
+        align-items: center;
+        .stroka__item {
+            img{
+                max-width: 100px;
+                max-height: 50px;
+            }
+        }
+    }
+    @keyframes stroka {
+        from {
+          transform: translateX(-25%); /* Начинаем с правого края */
+        }
+        to {
+          transform: translateX(-100%); /* Заканчиваем на левом краю */
+        }
+    }
+}
+// Конец редактирования главной
+
+// Начало редактирования Команда
+.banner-komanda {
+    height: 477px;
+    .container {
+        .banner-komanda__title {
+            width: 545px;
+            height: 98px;
+            padding-bottom: 14px;
+
+        }
+        .banner-title {
+        }
+        .banner-komanda__text {
+            max-width: 765px;
+            margin-bottom: 88px;
+        }
+        .banner-text {
+        }
+        .banner-komanda__icons {
+        }
+        .icons {
+        }
+        .icon {
+        }
+    }
+    
+}
+.cards-komanda {
+    margin-top: 50px;
+    .container {
+        max-width: 1292px;
+    }
+    .cards-komanda__row {
+        display: flex;
+        gap: 30px; //отступ в макете немного другой, можно сказать, что усреднил
+        flex-wrap: wrap;
+        .cards-komanda__item {
+            //width: 409px;
+            //height: 949px;
+            flex: 0 0 409px;         /* Каждый элемент занимает минимум 30% ширины контейнера */
+            box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+            padding: 13px;         /* Отступы внутри элемента */
+    
+            background: #F1EEE1;
+            backdrop-filter: blur(10px);
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 10px;
+            .cards-komanda__image {
+                max-width: 370px;
+                max-height: 400px;
+                object-fit: contain;
+                border-radius: 10px;
+
+                img {
+                    //max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .cards-komanda__name {
+                margin-top: 39px;
+
+                width: 383px;
+                height: 40px;
+
+                font-family: 'Bebas Neue';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 95%;
+                /* or 38px */
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+
+                color: #333333;
+
+            }
+            .cards-komanda__speciality {
+                padding-top: 9px;
+
+                width: 380px;
+                height: 30px;
+
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 145%;
+                /* or 29px */
+
+                color: #333333;
+
+
+            }
+            .cards-komanda__dop {
+                padding-top: 24px;
+                p {
+                    
+                width: 380px;
+
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 145%;
+                /* or 23px */
+
+                color: #333333;
+
+
+                }
+            }
+            .cards-komanda__button {
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; //для доп центрирования
+                    align-items: center;
+                button {
+                    //width: 357px;
+                    width: 92%;
+                    height: 71px;
+                }
+                a{
+                    //width: 357px;
+                    width: 92%;
+                    height: 71px;
+                }
+            }
+        }
+    }
+}
+// Конец редактирования Команда
+
+// Начало редактирования Академия
+
+.banner-academy-manicure {
+    .banner {
+        min-height: 377px;
+    }
+    .container {
+    }
+    .banner-academy-manicure__title {
+        text-align: center;
+    }
+    .banner-title {
+    }
+    .banner-academy-manicure__text {
+        padding-bottom: 123px;
+        width: 100%;
+        text-align: center;
+    }
+    .banner-text {
+    }
+}
+
+.cards-academy-manicure {
+    margin-top: 24px;
+    .container {
+        max-width: 1350px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .cards-academy-manicure__row {
+        display: flex;
+
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        //gap: 50px; //отступ в макете немного другой, можно сказать, что усреднил
+        
+        background: #F1EEE1;
+        backdrop-filter: blur(10px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 10px;
+
+    }
+    .cards-academy-manicure__item {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 21px;
+        margin-bottom: 24px;
+        //width: 410px;
+        min-height: 890px;
+        flex: 0 0 409px;         /* Каждый элемент занимает минимум 30% ширины контейнера */
+        box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+        padding: 13px;         /* Отступы внутри элемента */
+
+        background: #FFFFFF;
+        backdrop-filter: blur(10px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 10px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cards-academy-manicure__body{
+
+    }
+    .cards-academy-manicure__image {
+        max-width: 100%;
+    }
+    .cards-academy-manicure__title {
+        max-width: 384px;
+        //height: 40px;
+
+
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 95%;
+        /* or 34px */
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+        color: #333333;
+
+
+    }
+    .cards-academy-manicure__info {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        max-width: 381px;
+        //height: 106px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        /* or 23px */
+
+        color: #333333;
+
+
+    }
+    .cards-academy-manicure__text {
+        max-width: 381px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        /* or 23px */
+
+        color: #333333;
+
+
+    }
+    .cards-academy-manicure__button {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; //для доп центрирования
+        align-items: center;
+    button {
+        //width: 358px;
+        width: 93%;
+        height: 71px;
+    }
+    a {
+        //width: 358px;
+        width: 93%;
+        height: 71px;
+    }
+}
+}
+
+.students-academy-manicure {
+    margin-top: 100px;
+    //margin-bottom: 83px;
+    .container {
+        max-width: 1130px;
+    }
+    .students-academy-manicure__row {
+        display: flex;
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        gap: 40px; //отступ в макете немного другой, можно сказать, что усреднил
+
+    }
+    .students-academy-manicure__item {
+        flex: 1 0 30%;         /* Каждый элемент занимает минимум 30% ширины контейнера */
+        box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+    }
+    .students-academy-manicure__image {
+    }
+}
+
+
+// Конец редактирования Академия
+
+
+// Начало редактировани Наши работы
+
+.wrapper {
+    .banner-nashi-raboti {
+        .banner {
+        }
+        .container {
+        }
+        .banner-academy-manicure__title {
+        }
+        .banner-title {
+        }
+        .banner-komanda__icons {
+            margin-top: 88px;
+            padding-bottom: 41px;
+            .icons {
+            }
+        }
+        
+        .icon {
+        }
+    }
+    
+    .container {
+    }
+    .primeri-rabot {
+        margin-top: 40px;
+        .primeri-rabot__cards {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+    
+        }
+        .primeri-rabot__card {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+        
+            button {
+                min-width: 186px;
+                min-height: 55px;
+                padding: 20px;
+                background: #F1EEE1;
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 10px;
+        
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+    
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+    
+                color: #336A05;
+    
+    
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+        }
+    
+    }
+}
+
+
+// Конец редактировани Наши работы
+
+// Начало редактировани Окрашивание
+.uslugi-prototype {
+    .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .uslugi-prototype__left {
+        position: relative;
+        flex-basis: 690px; 
+        height: 627px;
+        background: linear-gradient(122.35deg, #1A1A1A 1.32%, #183500 35.76%, #101010 69.1%, #090909 110.65%);
+        border-radius: 10px;
+        .uslugi-prototype__title {
+            margin-left: 40px;
+            margin-top: 118px;
+            /* Салон красоты в Красноярске */
+            width: 545px;
+            /*height: 196px;*/  
+            h2 {
+
+            }
+        }
+        .uslugi-prototype__subtitle {
+            margin-left: 40px;
+            margin-top: 14px; 
+            
+            max-width: 382px;
+            height: 46px;
+    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 145%;
+            /* or 23px */
+    
+            color: #FFFFFF;
+        }
+        .uslugi-prototype__icons {
+            margin-top: 88px;
+            margin-left: 40px;
+            position: absolute;
+            bottom: 41px;
+        }
+    }
+    
+    .banner-title {
+    }
+    
+    .uslugi-prototype__right {
+        /* Уход за волосами_главный экран_галерея */
+
+        flex-basis: 690px; 
+        height: 627px;
+
+        //background: url();
+        border-radius: 10px;
+
+        img {
+            max-width: 100%;
+            max-height: 627px;
+        }
+    }
+
+}
+
+.uslugi-service {
+    margin-top: 37px;
+    margin-bottom: 83px;
+    .container {
+        max-width: 1200px;
+    }
+    .uslugi-service__table {
+        width: 100%; /* Ширина таблицы на всю ширину контейнера */
+        border-collapse: collapse; /* Разделение границ ячеек */
+        //border-spacing: 0 10px; /* Вертикальный отступ между строками */
+        th, td {
+            border-bottom: 1px solid #F0F0F0; /* Нижняя граница ячеек */
+            padding: 10px; /* Отступы внутри ячеек */
+            text-align: left; /* Выравнивание текста по левому краю */
+            background-color: white; /* Фон ячеек */
+        }
+
+        td {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 250%;
+            /* or 50px */
+
+            color: #333333;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        th {
+            //min-width: 167px;
+            //min-height: 50px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 250%;
+            /* identical to box height, or 50px */
+            color: rgba(51, 51, 51, 0.8);
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .time{
+            text-align: center;
+        }
+        .price{
+            text-align: center;
+        }
+    }
+}
+
+// Конец редактировани Окрашивание
+
+.banner {
+        max-width: 1400px; /* Максимальная ширина 1440px */
+        width: 100%; /* Ширина 100% для адаптивности */
+        margin: 0 auto; /* Центрирование заголовка */
+
+        background: linear-gradient(122.35deg, #1A1A1A 1.32%, #183500 35.76%, #101010 69.1%, #090909 110.65%);
+        border-radius: 10px;
+
+        padding-top: 118px;
+        padding-left: 40px;
+
+}
+
+
+.title {
+    min-width: 245px;
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 125%;
+        /* identical to box height, or 125px */
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #333333;
+    }
+}
+.subtitle {
+    //min-width: 245px;
+    //min-height: 125px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        /* or 23px */
+
+        color: #333333;
+    }
+}
+
+.banner-title {
+    h2  {
+        
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 98%;
+        /* or 98px */
+        text-transform: uppercase;
+        color: #FFFFFF;
+        
+    }
+}
+.banner-text {
+    
+    p  {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        /* or 23px */
+
+        color: #FFFFFF;
+
+
+    }
+}
+
+.button-yellow{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 35px;
+        gap: 10px;
+    
+        background: #F7CC20;
+        border-radius: 10px;
+
+        /* Подробнее */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #333333;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+}
+.button-yellow:active{
+    /*Эффект при нажатии*/
+    background: #274D07;
+    color: #FFFFFF;
+}
+
+.button-green{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 35px;
+    gap: 10px;
+
+    background: #274D07;
+    border-radius: 10px;
+
+
+    //Ниже шрифт у кнопки
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.button-green:active{
+    /*Эффект при нажатии*/
+    background: #F7CC20;
+    color: #333333;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.banner {
+}

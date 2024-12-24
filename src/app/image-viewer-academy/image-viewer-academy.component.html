@@ -1,0 +1,12 @@
+<div class="academy-raboti">
+    <div class="container">
+        <div class="academy-raboti__row">
+            <img *ngFor="let img of images" [src]="img.src" [alt]="img.alt" (click)="openImage(img.src)" class="thumbnail" />
+        </div>  
+    </div>
+</div>
+
+<div *ngIf="selectedImage" class="modal" (click)="closeImage()">
+    <img [src]="selectedImage" class="enlarged-image" />
+</div>
+  

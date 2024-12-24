@@ -1,0 +1,108 @@
+.slider-container {
+    position: relative;
+    width: calc(420px * 3 + (20px * 2) + 100px); /* Ширина для трех изображений плюс отступы */
+    margin: 0 auto;
+    height: auto; /* Высота будет зависеть от содержимого */
+    overflow: hidden; /* Скрывает переполнение */
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__slides {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    transition: transform 0.6s ease; /* Добавляем плавный переход при переключении */
+    width: calc(420px * 3); /* Установите ширину для отображаемых слайдов */
+}
+
+.slider__card {
+    background: #F1EEE1;
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 10px;
+
+    width: 420px; /* Ширина карточки */
+    margin-right: 20px; /* Отступ между карточками */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__card:last-child {
+    margin-right: 0; /* Убираем отступ у последней карточки */
+}
+
+.slide__image {
+    padding: 25px;
+    width: 100%; /* Заполняет всю ширину карточки */
+    height: auto; /* Сохраняет пропорции изображения */
+}
+
+h3 {
+    margin: 0 25px; /* Отступы для текста */
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 125%;
+    /* identical to box height, or 50px */
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #333333;
+}
+
+p {
+    margin: 0 25px; /* Отступы для текста */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    /* or 29px */
+    text-align: center;
+
+    color: #333333;
+
+
+}
+
+.action-button {
+    margin: 20px;
+    width: 85%;
+    min-height: 55px;
+
+}
+
+.nav-button {
+    font-size: 14px;
+    position: absolute;
+    top: calc(50% - 20px);
+    transform: translateY(-50%);
+    background-color: #F7CC20;
+    color: #000000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-button {
+    left: 10px; /* Позиция кнопки "Назад" */
+}
+
+.next-button {
+    right: 10px; /* Позиция кнопки "Вперед" */
+}
+
+.nav-button[disabled] {
+    background-color: #FBF2BB; /* Цвет для отключенной кнопки */
+}
